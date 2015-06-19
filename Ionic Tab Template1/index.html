@@ -1,0 +1,65 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+
+    <meta charset="utf-8" />
+    <title>Ionic Tab Template</title>
+
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <style>
+        .angular-google-map-container {
+            width: 100%;
+            height: 504px;
+        }
+    </style>
+
+    <link rel="stylesheet" href="http://code.ionicframework.com/ionicons/1.5.2/css/ionicons.min.css">
+    <link href="/lib/ionic.css" rel="stylesheet">
+    <!-- ionic/angularjs js -->
+    <script src="/lib/ionic.bundle.js"></script>
+    <script src="scripts/odataresources.js"></script>
+
+    <script src="app.js"></script>
+    <script src="controllers.js"></script>
+    <script src="controllersViaje.js"></script>
+
+    <!-- your project references -->
+    <link href="css/index.css" rel="stylesheet" />
+
+</head>
+<body ng-app="app" animation="slide-left-right-ios7">
+    <script src="cordova.js"></script>
+    <script src="scripts/platformOverrides.js"></script>
+    <div>
+        <div>
+            <!-- Header Bar. "bar-positive" gives it the blue appearance. Change to whatever you want -->
+            <ion-nav-bar class="bar bar-header bar-positive">
+                <ion-nav-back-button class="button-clear">
+                    <i class="ion-ios7-arrow-back"></i> Back
+                </ion-nav-back-button>
+            </ion-nav-bar>
+            
+            <!-- Tabs. "tabs-dark" gives them the dark appearance. Change to whatever you want -->
+            <ion-tabs class="tabs-dark tabs-icon-top">
+                <ion-tab title="First Page" icon="ion-ios7-home-outline" ui-sref="firstPageState">
+                    <ion-nav-view name="firstpage"></ion-nav-view>
+                </ion-tab>
+                <ion-tab title="Second Page" icon="ion-ios7-cloud-outline" ui-sref="secondPageState">
+                    <ion-nav-view name="secondpage"></ion-nav-view>
+                </ion-tab>
+                <ion-tab title="Viajes" icon="ion-flask" ui-sref="viajePageState">
+                    <ion-nav-view name="viajepage"></ion-nav-view>
+                </ion-tab>
+            </ion-tabs>
+        </div>
+    </div>
+    <script id="firstpage.html" type="text/ng-template">
+        <ion-view title="First Tab">
+            <ion-content padding="true" class="has-header">
+                <h1>Welcome to Tab 1</h1>
+            </ion-content>
+        </ion-view>
+    </script>
+   
+</body>
+</html>
